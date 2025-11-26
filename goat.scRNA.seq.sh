@@ -394,9 +394,10 @@ python change.py
 ######scenic
 /Software/miniconda/miniconda3/envs/pyscenic2/bin/pyscenic grn --num_workers 20 --output /data/scenic/Horn_skin_AllCell_grn.tsv --method grnboost2  /data/scenic/sce_count.loom /data/.scenic/allTFs_hg38.txt
 
-/Software/miniconda/miniconda3/envs/pyscenic2/bin/pyscenic ctx  /data/scenic/Horn_skin_IFE_AllCell_grn.tsv /data/scenic/Up_500bp_Down_100bp.regions_vs_motifs.rankings.feather --annotations_fname /data/xuxiaoli/1.Results/4.scenic/motifs-v10nr_clust-nr.hgnc-m0.001-o0.0.tbl  --expression_mtx_fname /data/scenic/sce_count.loom  --mode "dask_multiprocessing" --output /data/scenic/Horn_skin_IFE_AllCell_reg.csv --num_workers 20 --mask_dropouts
+/Software/miniconda/miniconda3/envs/pyscenic2/bin/pyscenic ctx  /data/scenic/Horn_skin_AllCell_grn.tsv /data/scenic/Up_500bp_Down_100bp.regions_vs_motifs.rankings.feather --annotations_fname /data/scenic/motifs-v10nr_clust-nr.hgnc-m0.001-o0.0.tbl  --expression_mtx_fname /data/scenic/sce_count.loom  --mode "dask_multiprocessing" --output /data/scenic/Horn_skin_AllCell_reg.csv --num_workers 20 --mask_dropouts
 
-/Software/miniconda/miniconda3/envs/pyscenic2/bin/pyscenic aucell  /data/xuxiaoli/1.Results/4.scenic/sce_count.loom /data/scenic/Horn_skin_IFE_AllCell_reg.csv --output /data/scenic/Horn_skin_IFE_AllCell_aucell_goat.loom --num_workers 20
+/Software/miniconda/miniconda3/envs/pyscenic2/bin/pyscenic aucell  /data/scenic/sce_count.loom /data/scenic/Horn_skin_AllCell_reg.csv --output /data/scenic/Horn_skin_aucell_goat.loom --num_workers 20
+
 
 
 
